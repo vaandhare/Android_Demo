@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_4dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="@dimen/_4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_poster"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_view_width"
+            android:contentDescription="@string/movie_poster_image" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16sp"
+            android:lines="1"
+            android:textStyle="bold|italic"/>
+
+        <TextView
+            android:id="@+id/tv_vote_avg"
+            android:layout_gravity="end|bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_16sp"
+            android:textStyle="bold"
+            android:background="@color/teal_200"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/_4dp"
+            app:drawableLeftCompat="@drawable/ic_baseline_star_border"
+            tools:ignore="RtlSymmetry" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

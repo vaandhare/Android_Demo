@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/btn_enrich"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="@dimen/_24dp"-->
+<!--        android:text="@string/enrich_api"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:backgroundTint="@null"-->
+<!--        android:textSize="@dimen/text_size_16sp"-->
+<!--        android:background="#F44336"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/btn_TMDB"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_TMDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_24dp"
+        android:text="@string/tmdb_api"
+        android:textColor="@color/black"
+        app:backgroundTint="@null"
+        android:textSize="@dimen/text_size_16sp"
+        android:background="@drawable/ripple_effect_tmdb"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Github"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Github"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginEnd="@dimen/_24dp"
+        android:textColor="@color/black"
+        app:backgroundTint="@null"
+        android:textSize="@dimen/text_size_16sp"
+        android:background="@drawable/github_gradient"
+        android:text="@string/github_api"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/margin_bottom_48" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

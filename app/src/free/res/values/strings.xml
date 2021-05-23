@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Free- Concepts</string>
+    <string name="movie_poster_image">Movie Poster Image</string>
+    <string name="tmdb_api">TMDB API</string>
+    <string name="github_api">Github API</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="search">Search</string>
+    <string name="followers">Followers</string>
+    <string name="followings">Followings</string>
+    <string name="repositories">Repositories</string>
+    <string name="user_profile">User Profile</string>
+    <string name="no_result_found">No result found! ;(</string>
+    <string name="filter_movie_type">Filter Movie Type</string>
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="enrich_api">Enrich API</string>
+    <string name="enrich_id">Id: </string>
+    <string name="enrich_name">Name: </string>
+    <string name="enrich_sku">Sku: </string>
+    <string name="enrich_price">Price: </string>
+    <string name="enrich_special_price">Special Price: </string>
+    <string name="enrich_category">Category: </string>
+    <string name="enter_url_key">Enter URL Key</string>
+    <string name="mobile">Mobile</string>
+    <string name="web">Web</string>
+    <string name="platform">Platform</string>
+    <string name="is_custom">Is Custom</string>
+    <string name="submit">Submit</string>
+    <string name="free_version">Free Version</string>
+</resources>

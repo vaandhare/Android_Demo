@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GithubActivity">
+
+    <LinearLayout
+        android:id="@+id/ag_ll_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_8dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ag_etv_username"
+            android:layout_width="@dimen/text_input_width"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_username">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:background="@color/white"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ag_btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            android:layout_gravity="center_vertical"
+            app:backgroundTint="@null"
+            android:textColor="@color/black"
+            android:background="@drawable/github_gradient"
+            android:layout_margin="@dimen/_8dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_no_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_result_found"
+        android:textSize="@dimen/text_size_24sp"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/ag_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_16sp"
+            android:textStyle="bold"
+            android:padding="@dimen/_8dp"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/iv_user_profile"
+            android:layout_width="@dimen/image_view_100dp"
+            android:layout_height="@dimen/image_view_100dp"
+            android:layout_below="@id/tv_username"
+            android:contentDescription="@string/user_profile" />
+
+        <TextView
+            android:id="@+id/tv_user_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_username"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/_4dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16sp"
+            android:layout_toEndOf="@+id/iv_user_profile"/>
+
+        <TextView
+            android:id="@+id/tv_user_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_user_bio"
+            android:padding="@dimen/_4dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16sp"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/iv_user_profile"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ag_ll_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_margin="@dimen/_4dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_followers_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_followers"
+                android:layout_alignEnd="@id/tv_followers"
+                android:textColor="#FFF"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold"
+                android:background="@drawable/notification_badge"/>
+
+            <TextView
+                android:id="@+id/tv_followers"
+                android:layout_width="@dimen/text_view_width"
+                android:layout_height="@dimen/text_view_height"
+                android:text="@string/followers"
+                android:textSize="@dimen/text_size_24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/_1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <RelativeLayout
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_following_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_followings"
+                android:layout_alignEnd="@id/tv_followings"
+                android:textColor="#FFF"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold"
+                android:background="@drawable/notification_badge"/>
+
+            <TextView
+                android:id="@+id/tv_followings"
+                android:layout_width="@dimen/text_input_width"
+                android:layout_height="@dimen/text_view_height"
+                android:text="@string/followings"
+                android:textSize="@dimen/text_size_24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_repository"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/repositories"
+        android:textSize="@dimen/text_size_24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:padding="@dimen/_8dp"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/repos_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+</LinearLayout>
